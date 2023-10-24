@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 echo "Deployment started ..."
@@ -13,7 +14,7 @@ git reset --hard origin/master
 git pull origin master
 
 # Compile npm assets
-npm install
+npm install --production
 
 # Exit maintenance mode
 pm2 start server.js
