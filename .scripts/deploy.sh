@@ -14,7 +14,7 @@ git reset --hard origin/master
 git pull origin master
 
 # Compile npm assets
-npm install --production
+npm install --omit=dev
 
 # Exit maintenance mode
 pm2 start server.js
