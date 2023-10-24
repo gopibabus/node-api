@@ -17,9 +17,9 @@ git reset --hard origin/master
 git pull origin master
 
 # Compile npm assets
-$NPM_PATH install --omit=dev
+$NODE_PATH $NPM_PATH install --omit=dev
 
 # Exit maintenance mode
-$NODE_PATH $PM2_PATH start server.js
+($NODE_PATH $PM2_PATH start server.js)
 
 echo "Deployment finished!"
