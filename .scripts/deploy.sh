@@ -8,9 +8,8 @@ NPM_PATH=/root/.nvm/versions/node/v18.10.0/bin/npm
 
 echo "Deployment started ..."
 
-# Enter maintenance mode or return true
-# if already is in maintenance mode
-($NODE_PATH $PM2_PATH stop server.js --message 'The app is being (quickly!) updated. Please try again in a minute.') || true
+# Enter maintenance mode or return true if already in maintenance mode
+($NODE_PATH $PM2_PATH stop server.js) || true
 
 # Pull the latest version of the app
 git fetch origin master
